@@ -14,7 +14,7 @@ iframe {
   border: 1.5em solid #ccc;
   padding: 1em;
 }
-.video-wall h4 {
+.video-wall strong {
   display: block;
   text-align: center;
   font-size: 1.1em;
