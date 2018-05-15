@@ -9,15 +9,15 @@ Normal eingebettete YouTube-Videos werden durch solche mit „erweitertem Datens
 
 ## How-To
 
-Einfach `dgsvo-video-embed.css` und `dgsvo-video-embed.js` in das `<head>` Element einfügen und fertig!
+Einfach `dsgvo-video-embed.css` und `dsgvo-video-embed.js` in das `<head>` Element einfügen und fertig!
 
 *Hinweis:* Das Skript sollte wirklich in das `<head>` Element eingefügt werden und nicht (wie auch üblich) vor den schließenden `<body>`-Tag, da die `iframes` sonst nicht rechtzeitig vom Verbindungsaufbau zu YouTube bzw. Vimeo abgehalten werden können!
 
 ```html
 <head>
   …
-  <link rel="stylesheet" href="dgsvo-video-embed.min.css">
-  <script src="dgsvo-video-embed.min.js"></script>
+  <link rel="stylesheet" href="dsgvo-video-embed.min.css">
+  <script src="dsgvo-video-embed.min.js"></script>
 </head>
 ```
 
@@ -25,7 +25,7 @@ Einfach `dgsvo-video-embed.css` und `dgsvo-video-embed.js` in das `<head>` Eleme
 
 Das Skript ist jeweils mit einem Standard-Text für YouTube und Vimeo ausgestattet. Wer damit zufrieden ist, muss gar nichts ändern!
 
-Wer den Text jedoch ändern will, findet ihn am Anfang der Datei `js/dgsvo-video-embed.js` (oder auch `js/dgsvo-video-embed.min.js`):
+Wer den Text jedoch ändern will, findet ihn am Anfang der Datei `js/dsgvo-video-embed.js` (oder auch `js/dsgvo-video-embed.min.js`):
 
 ```javascript
 // Config
