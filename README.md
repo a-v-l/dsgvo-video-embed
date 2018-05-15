@@ -23,7 +23,9 @@ Einfach `dgsvo-video-embed.css` und `dgsvo-video-embed.js` in das `<head>` Eleme
 
 ## Konfiguration
 
-Am Anfang der Datei `js/dgsvo-video-embed.js` (oder auch `js/dgsvo-video-embed.min.js`) wird der Text definiert, welcher anstatt des Videos angezeigt werden soll:
+Das Skript ist jeweils mit einem Standard-Text für YouTube und Vimeo ausgestattet. Wer damit zufrieden ist, muss gar nichts ändern!
+
+Wer den Text jedoch ändern will, findet ihn am Anfang der Datei `js/dgsvo-video-embed.js` (oder auch `js/dgsvo-video-embed.min.js`):
 
 ```javascript
 // Config
@@ -33,7 +35,7 @@ var text = {
 }
 ```
 
-Natürlich kann dieser Text beliebig ausgetauscht werden (wie das CSS auch). Wenn man jedoch nur inhaltliche Änderungen vornehmen will, kann man sich an das vorhandene HTML-Gerüst halten:
+Natürlich kann dieser Text beliebig verändert werden (wie das CSS auch). Wenn man jedoch nur inhaltliche Anpassungen vornehmen will, kann man sich an das vorhandene HTML-Gerüst halten:
 
 ```html
 <strong>Titel</strong>
@@ -44,7 +46,8 @@ Natürlich kann dieser Text beliebig ausgetauscht werden (wie das CSS auch). Wen
 <button>Video abspielen</button>
 ```
 
-Der Platzhalter `%id%` wird durch die Video-ID ersetzt.
+Der Platzhalter `%id%` wird durch die Video-ID ersetzt.  
+Das Element `<button>` wird mit einem Eventlistener versehen, der den Platzhalter wieder mit dem ursprünglichen `<iframe>` ersetzt.
 
 ## Rechtlicher Hinweis / Disclaimer
 
