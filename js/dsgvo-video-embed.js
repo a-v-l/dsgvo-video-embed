@@ -25,10 +25,10 @@
          continue;
        }
        // Prevent iframes from loading remote content
-       if(navigator.appName == 'Microsoft Internet Explorer') {
-         window.frames[0].document.execCommand('Stop');
-       } else {
-         window.frames[0].stop();
+       if (typeof (window.frames[0].stop) === 'undefined'){
+       	setTimeout(function() {window.frames[0].execCommand('Stop');},1000);
+       }else{
+       	setTimeout(function() {window.frames[0].stop();},1000);
        }
        video_platform = video_frame.src.match(/vimeo/) == null ? 'youtube' : 'vimeo';
        video_id = video_frame.src.match(/(embed|video)\/([^?\s]*)/)[2];
