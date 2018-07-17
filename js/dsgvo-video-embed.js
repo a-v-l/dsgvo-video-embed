@@ -1,5 +1,5 @@
 /**
- * DSGVO Video Embed, v1.0.1
+ * DSGVO Video Embed, v1.0.2
  * (c) 2018 Arndt von Lucadou
  * MIT License
  * https://github.com/a-v-l/dsgvo-video-embed
@@ -18,10 +18,11 @@
        video_frame = document.getElementsByTagName('iframe')[0];
        video_w = video_frame.getAttribute('width');
        video_h = video_frame.getAttribute('height');
+       video_src = video_frame.src;
        video_iframes.push(video_frame);
        wall = document.createElement('article');
        // Only proccess video iframes [youtube|vimeo]
-       if (video_frame.src.match(/youtube|vimeo/) == null) {
+       if (video_src.match(/youtube|vimeo/) == null) {
          continue;
        }
        // Prevent iframes from loading remote content
@@ -30,8 +31,8 @@
        }else{
        	setTimeout(function() {window.frames[0].stop();},1000);
        }
-       video_platform = video_frame.src.match(/vimeo/) == null ? 'youtube' : 'vimeo';
-       video_id = video_frame.src.match(/(embed|video)\/([^?\s]*)/)[2];
+       video_platform = video_src.match(/vimeo/) == null ? 'youtube' : 'vimeo';
+       video_id = video_src.match(/(embed|video)\/([^?\s]*)/)[2];
        wall.setAttribute('class', 'video-wall');
        wall.setAttribute('data-index', i);
        if (video_w && video_h) {
