@@ -57,6 +57,8 @@
                 }
                 video_iframes[index].src = video_iframes[index].src.replace(/www\.youtube\.com/, 'www.youtube-nocookie.com');
                 video_frame.parentNode.replaceChild(video_iframes[index], video_frame);
+                video_iframes[index].classList.add('ck_embed_iframe');
+                video_iframes[index].parentNode.classList.add('ck_embed_iframe__container');
             }, false);
         }
     });
