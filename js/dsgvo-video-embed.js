@@ -9,11 +9,11 @@
     // Config
     var text = {
         youtube: '<strong>' + django.gettext('External Video') + '</strong>' +
-             '<div>' + '<p>' + django.gettext('Here you can find a video from YouTube. To protect your data the content will only be loaded after you give your consent. Only then will YouTube set Cookies that collect information on user behaviour.') +
-             '</p>' + '<p>' + django.gettext('More information can be found in the privacy policy of YouTube under: ') +
+             '<div>' + '<p>' + django.gettext('Here you can find a video from Google (YouTube). To protect your data the content will only be loaded after you give your consent. Only then will YouTube set Cookies that collect information on user behaviour.') +
+             '</p>' + '<p>' + django.gettext('More information can be found in the privacy policy of Google under: ') +
              '<a href="https://www.google.de/intl/de/policies/privacy/" rel="noopener" target="_blank">' + 'https://policies.google.com/privacy/' +
              '</a>' + '</p>' + '</div>' + '<a class="video-link" href="https://youtu.be/%id%" rel="noopener" target="_blank">' + django.gettext('Link to Video: ') + 'https://youtu.be/%id%' + '</a>' + '<button>' + django.gettext('Play video') + '</button>',
-         vimeo: '<strong>' + django.gettext('external video') + '</strong>' +
+        vimeo: '<strong>' + django.gettext('external video') + '</strong>' +
              '<div>' + '<p>' + django.gettext('here you can find a video from vimeo. to protect your data the content will only be loaded after you give your consent. only then will vimeo set cookies that collect information on user behaviour.') +
              '</p>' + '<p>' + django.gettext('more information can be found in the privacy policy of vimeo under: ') +
              '<a href="https://vimeo.com/privacy" rel="noopener" target="_blank">' + 'https://vimeo.com/privacy' +
