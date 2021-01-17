@@ -1,6 +1,6 @@
 /**
- * DSGVO Video Embed, v1.0.2
- * (c) 2018 Arndt von Lucadou
+ * DSGVO Video Embed, v1.0.3
+ * (c) 2021 Arndt von Lucadou
  * MIT License
  * https://github.com/a-v-l/dsgvo-video-embed
  */
