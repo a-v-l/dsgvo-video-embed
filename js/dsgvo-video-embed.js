@@ -16,15 +16,18 @@
      var video_frame, wall, video_platform, video_src, video_id, video_w, video_h;
      for (var i=0, max = window.frames.length - 1; i <= max; i+=1) {
        video_frame = document.getElementsByTagName('iframe')[0];
-       video_w = video_frame.getAttribute('width');
-       video_h = video_frame.getAttribute('height');
        video_src = video_frame.src;
-       video_iframes.push(video_frame);
-       wall = document.createElement('article');
-       // Only proccess video iframes [youtube|vimeo]
+       // Only process video iframes [youtube|vimeo]
        if (video_src.match(/youtube|vimeo/) == null) {
          continue;
        }
+      
+       video_iframes.push(video_frame);
+       video_w = video_frame.getAttribute('width');
+       video_h = video_frame.getAttribute('height');
+       wall = document.createElement('article');
+      
+      
        // Prevent iframes from loading remote content
        if (typeof (window.frames[0].stop) === 'undefined'){
        	setTimeout(function() {window.frames[0].execCommand('Stop');},1000);
