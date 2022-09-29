@@ -1,0 +1,14 @@
+{ 
+    "name": "dsgvo-video-embed", 
+    "version": "1.1.0", 
+    "author": "Arndt von Lucadou", 
+    "private": true, 
+    "devDependencies": { 
+        "grunt": "~0.4.*", 
+        "grunt-contrib-cssmin": "*", 
+        "grunt-contrib-qunit": "*", 
+        "grunt-contrib-jshint": "*", 
+        "grunt-contrib-uglify": "*", 
+        "matchdep": "*"
+    } 
+}
