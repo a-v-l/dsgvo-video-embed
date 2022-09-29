@@ -1,5 +1,5 @@
 /**
- * DSGVO Video Embed, v1.0.3
+ * DSGVO Video Embed, v1.1.0
  * (c) 2021 Arndt von Lucadou
  * MIT License
  * https://github.com/a-v-l/dsgvo-video-embed
@@ -13,6 +13,10 @@
    };
    window.video_iframes = [];
    document.addEventListener("DOMContentLoaded", function() {
+     if (document.cookie.split('; ').find(row => row.startsWith('dsgvo-video-embed'))) {
+       return;
+     }
+
      var video_frame, wall, video_platform, video_src, video_id, video_w, video_h;
      for (var i=0, max = window.frames.length - 1; i <= max; i+=1) {
        video_frame = document.getElementsByTagName('iframe')[0];
@@ -21,13 +25,12 @@
        if (video_src.match(/youtube|vimeo/) == null) {
          continue;
        }
-      
+
        video_iframes.push(video_frame);
        video_w = video_frame.getAttribute('width');
        video_h = video_frame.getAttribute('height');
        wall = document.createElement('article');
-      
-      
+
        // Prevent iframes from loading remote content
        if (typeof (window.frames[0].stop) === 'undefined'){
        	setTimeout(function() {window.frames[0].execCommand('Stop');},1000);
@@ -44,10 +47,10 @@
        wall.innerHTML = text[video_platform].replace(/\%id\%/g, video_id);
        video_frame.parentNode.replaceChild(wall, video_frame);
        document.querySelectorAll('.video-wall button')[i].addEventListener('click', function() {
-         var video_frame = this.parentNode,
-             index = video_frame.getAttribute('data-index');
+         var video_frame = this.parentNode, index = video_frame.getAttribute('data-index');
          video_iframes[index].src = video_iframes[index].src.replace(/www\.youtube\.com/, 'www.youtube-nocookie.com');
          video_frame.parentNode.replaceChild(video_iframes[index], video_frame);
+         document.cookie = "dsgvo-video-embed=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
        }, false);
      }
    });
