@@ -1,10 +1,13 @@
 iframe {
   display: inline-block;
 }
+
 iframe[data-src] {
-  background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><text text-anchor="middle" alignment-baseline="central" y="50%" font-size="1em" fill="black"><tspan x="50%" dy="-1.5em">Dieses Video kann nur mit</tspan><tspan x="50%" dy="1.5em">aktiviertem JavaScript</tspan><tspan x="50%" dy="1.5em">abgespielt werden</tspan></text></svg>');
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><text text-anchor="middle" alignment-baseline="central" y="50%" font-size="1em" fill="black"><tspan x="50%" dy="-1.5em">Dieses Video kann nur mit</tspan><tspan x="50%" dy="1.5em">aktiviertem JavaScript</tspan><tspan x="50%" dy="1.5em">abgespielt werden</tspan></text></svg>');
 }
-.video-wall, iframe[data-src] {
+
+.video-wall,
+iframe[data-src] {
   position: relative;
   font: 400 1em/1.46 Helvetica, Arial, sans-serif;
   color: #333;
@@ -17,12 +20,14 @@ iframe[data-src] {
   border: 1.5em solid #ccc;
   padding: 1em;
 }
+
 .video-wall strong {
   display: block;
   text-align: center;
   font-size: 1.1em;
   margin: 0;
 }
+
 .video-wall div {
   position: absolute;
   width: calc(100% - 2em);
@@ -30,13 +35,16 @@ iframe[data-src] {
   bottom: 7em;
   overflow-y: auto;
 }
+
 .video-wall p {
   font-size: 0.8em;
   margin: 0 0 1em;
 }
+
 .video-wall a {
   color: inherit;
 }
+
 .video-wall .video-link {
   display: block;
   white-space: nowrap;
@@ -47,8 +55,10 @@ iframe[data-src] {
   bottom: 6em;
   transform: translateX(-50%);
 }
+
 .video-wall button {
   -webkit-appearance: none;
+  appearance: none;
   cursor: pointer;
   color: #eee;
   font: 700 0.8em/1.2 Helvetica, Arial, sans-serif;
@@ -68,6 +78,7 @@ iframe[data-src] {
   background-size: 3.5em;
   transition: background-color 0.3s;
 }
+
 .video-wall button:hover {
   background-color: #444;
 }
