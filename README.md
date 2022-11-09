@@ -13,7 +13,7 @@ Das Script funktioniert ohne weitere Anpassungen der iframes nur, wenn im Browse
 ## How-To
 
 ### 1. Einbinden des Scripts
-Einfach `dsgvo-video-embed.css` und `dsgvo-video-embed.js` in das `<head>` Element einfügen und fertig!
+Die beiden Scripts `dsgvo-video-embed.css` und `dsgvo-video-embed.js` in das `<head>` Element einfügen.
 
 *Hinweis:* Das Skript sollte wirklich in das `<head>` Element eingefügt werden und nicht (wie auch üblich) vor den schließenden `<body>`-Tag, da die `iframes` sonst nicht rechtzeitig vom Verbindungsaufbau zu YouTube bzw. Vimeo abgehalten werden können!
 
@@ -30,12 +30,16 @@ Von YouTube bzw. Vimeo wird ein `<iframe>` zum einbetten des Videos angebotenen.
 
 Aus
 ```html
+  <!-- Beispiel YouTube -->
   <iframe width="560" height="315" src="https://www.youtube.com/embed/hZ3w5VMr8gw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <!-- Beispiel Vimeo -->
   <iframe src="https://player.vimeo.com/video/10149605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 ```
 wird
 ```html
+  <!-- Beispiel YouTube -->
   <iframe width="560" height="315" data-src="https://www.youtube.com/embed/hZ3w5VMr8gw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <!-- Beispiel Vimeo -->
   <iframe data-src="https://player.vimeo.com/video/10149605" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 ```
 Lediglich `src` wird zu `data-src`, sonst bleibt alles unverändert.
