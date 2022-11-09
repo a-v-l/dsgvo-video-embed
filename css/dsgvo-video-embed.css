@@ -1,7 +1,10 @@
 iframe {
   display: inline-block;
 }
-.video-wall {
+iframe[data-src] {
+  background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><text text-anchor="middle" alignment-baseline="central" y="50%" font-size="1em" fill="black"><tspan x="50%" dy="-1.5em">Dieses Video kann nur mit</tspan><tspan x="50%" dy="1.5em">aktiviertem JavaScript</tspan><tspan x="50%" dy="1.5em">abgespielt werden</tspan></text></svg>');
+}
+.video-wall, iframe[data-src] {
   position: relative;
   font: 400 1em/1.46 Helvetica, Arial, sans-serif;
   color: #333;
